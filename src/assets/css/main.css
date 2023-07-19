@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Open Sans";
   src:
-    asset-url("/fonts/OpenSans-Light.woff") format("woff"),
-    asset-url("/fonts/OpenSans-Light.woff2") format("woff2");
+    url("~/static/fonts/OpenSans-Light.woff") format("woff"),
+    url("~/static/fonts/OpenSans-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -10,8 +10,8 @@
 @font-face {
   font-family: "Open Sans";
   src:
-    asset-url("/fonts/OpenSans-Regular.woff") format("woff"),
-    asset-url("/fonts/OpenSans-Regular.woff2") format("woff2");
+    url("~/static/fonts/OpenSans-Regular.woff") format("woff"),
+    url("~/static/fonts/OpenSans-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -19,8 +19,8 @@
 @font-face {
   font-family: "Open Sans";
   src:
-    asset-url("/fonts/OpenSans-Semibold.woff") format("woff"),
-    asset-url("/fonts/OpenSans-Semibold.woff2") format("woff2");
+    url("~/static/fonts/OpenSans-Semibold.woff") format("woff"),
+    url("~/static/fonts/OpenSans-Semibold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
@@ -28,8 +28,8 @@
 @font-face {
   font-family: "Open Sans";
   src:
-    asset-url("/fonts/OpenSans-Bold.woff") format("woff"),
-    asset-url("/fonts/OpenSans-Bold.woff2") format("woff2");
+    url("~/static/fonts/OpenSans-Bold.woff") format("woff"),
+    url("~/static/fonts/OpenSans-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
 }
