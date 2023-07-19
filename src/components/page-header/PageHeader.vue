@@ -13,5 +13,3 @@ export default defineComponent({
     <h2>{{ $t("globals.greeting") }}</h2>
   </div>
 </template>
-
-<style scoped></style>

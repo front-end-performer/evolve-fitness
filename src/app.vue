@@ -17,5 +17,3 @@ export default defineComponent({
     <PageHeader />
   </main>
 </template>
-
-<style scoped lang="scss"></style>

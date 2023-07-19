@@ -2,7 +2,6 @@ import { isProdMode } from "./src/config/app";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: !isProdMode },
   dev: !isProdMode,
   srcDir: "src",
   css: ["~/assets/css/main.css", "~/assets/css/resets.css"],
