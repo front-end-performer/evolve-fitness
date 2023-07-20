@@ -19,12 +19,4 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 /** define PageHeader */
-
-.PageHeader {
-  border: 1px solid red;
-
-  &-header {
-    border: 1px solid green;
-  }
-}
 </style>
