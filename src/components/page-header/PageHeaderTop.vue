@@ -1,0 +1,74 @@
+<script lang="ts">
+import { defineComponent } from "vue";
+import { useBem } from "@/utilities/bem";
+
+export default defineComponent({
+  setup() {
+    const bem = useBem("PageHeaderTop");
+    const { isMobile } = useBreakPoints();
+
+    return { bem, isMobile };
+  },
+});
+</script>
+
+<template>
+  <div :class="bem()">
+    <div :class="bem('container')">
+      <div :class="bem('contacts')">
+        <FontIcon alias="phone" label="000-000-000" />
+        <FontIcon alias="envelope" label="email@email.com" />
+      </div>
+
+      <div :class="bem('socialLang')">
+        <div :class="bem('socialContainer')">
+          <span v-if="!isMobile" :class="bem('social')"
+            >{{ $t("components.topHeader.follow") }}:
+          </span>
+          <FontIcon alias="facebook" type="fab" />
+          <FontIcon alias="youtube" type="fab" />
+        </div>
+
+        <LanguageSelect />
+      </div>
+    </div>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+@import "@/assets/css/colors";
+@import "@/assets/css/variables";
+@import "@/assets/css/typography";
+
+/** define PageHeaderTop */
+
+.PageHeaderTop {
+  background-color: $color-black;
+  border-bottom: 2px solid gold;
+  padding: 0 $space-l;
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-socialLang,
+  &-socialContainer,
+  &-contacts {
+    color: $color-white;
+    display: flex;
+  }
+
+  &-social {
+    @include font-default-small;
+
+    align-items: center;
+    display: flex;
+    padding-right: $space-m;
+  }
+
+  &-languageSelector {
+    padding-left: $space-m;
+  }
+}
+</style>

@@ -2,5 +2,9 @@ export default {
   globals: {
     greeting: "Welcome",
   },
-  components: {},
+  components: {
+    topHeader: {
+      follow: "Follow",
+    },
+  },
 };

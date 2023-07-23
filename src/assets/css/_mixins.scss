@@ -1,0 +1,58 @@
+@import "@/assets/css/variables";
+@import "@/assets/css/colors";
+
+@mixin for-touch-devices-only {
+  @media (pointer: coarse) {
+    @content;
+  }
+}
+
+@mixin input {
+  @extend %font-default-small;
+
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: $form-field-height;
+  margin: 0;
+  overflow: hidden;
+  padding: $space-m;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:focus {
+    outline: 0;
+
+    &:enabled:not(.TextField--isTyping .TextField-input) {
+      border: 1px solid $color-black;
+    }
+  }
+
+  &:hover:enabled:not(&:focus) {
+    background-color: $color-black;
+    @include for-touch-devices-only {
+      background-color: $color-white;
+    }
+  }
+
+  &:hover:disabled:not(&:focus) {
+    background-color: $color-black;
+  }
+
+  &::placeholder:active:enabled {
+    color: $color-black;
+  }
+
+  &:disabled::placeholder {
+    color: $color-black;
+  }
+
+  &::placeholder {
+    color: $color-black;
+    opacity: inherit;
+  }
+}
