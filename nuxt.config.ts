@@ -4,8 +4,13 @@ import { isProdMode } from "./src/config/app";
 export default defineNuxtConfig({
   dev: !isProdMode,
   srcDir: "src",
-  css: ["~/assets/css/main.css", "~/assets/css/resets.css"],
+  css: [
+    "~/assets/css/main.css",
+    "~/assets/css/resets.css",
+    "@fortawesome/fontawesome-svg-core/styles.css",
+  ],
   modules: ["@nuxtjs/i18n"],
+  plugins: [{ src: "./src/plugins/fontAwesome.ts" }],
   i18n: {
     defaultLocale: "en",
     langDir: "config/locales",
@@ -15,6 +20,7 @@ export default defineNuxtConfig({
       cookieKey: "i18n_redirected",
       redirectOn: "root",
     },
+    lazy: true,
     locales: [
       { code: "en", file: "en.js" },
       { code: "de", file: "de.js" },
@@ -36,5 +42,14 @@ export default defineNuxtConfig({
         },
       ],
     },
+  },
+  build: {
+    transpile: [
+      "@fortawesome/fontawesome-svg-core",
+      "@fortawesome/free-brands-svg-icons",
+      "@fortawesome/free-regular-svg-icons",
+      "@fortawesome/free-solid-svg-icons",
+      "@fortawesome/vue-fontawesome",
+    ],
   },
 });

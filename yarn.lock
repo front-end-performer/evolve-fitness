@@ -538,6 +538,44 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.44.0.tgz#961a5903c74139390478bdc808bcde3fc45ab7af"
   integrity sha512-Ag+9YM4ocKQx9AarydN0KY2j0ErMHNIocPDrVo8zAE44xLTjEtz81OdR68/cydGtk6m6jDb5Za3r2useMzYmSw==
 
+"@fortawesome/fontawesome-common-types@6.4.0":
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-6.4.0.tgz#88da2b70d6ca18aaa6ed3687832e11f39e80624b"
+  integrity sha512-HNii132xfomg5QVZw0HwXXpN22s7VBHQBv9CeOu9tfJnhsWQNd2lmTNi8CSrnw5B+5YOmzu1UoPAyxaXsJ6RgQ==
+
+"@fortawesome/fontawesome-svg-core@^6.4.0":
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-6.4.0.tgz#3727552eff9179506e9203d72feb5b1063c11a21"
+  integrity sha512-Bertv8xOiVELz5raB2FlXDPKt+m94MQ3JgDfsVbrqNpLU9+UE2E18GKjLKw+d3XbeYPqg1pzyQKGsrzbw+pPaw==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "6.4.0"
+
+"@fortawesome/free-brands-svg-icons@^6.4.0":
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-6.4.0.tgz#c785cf5563231eadc5ef5f8cd0274e0b8920433f"
+  integrity sha512-qvxTCo0FQ5k2N+VCXb/PZQ+QMhqRVM4OORiO6MXdG6bKolIojGU/srQ1ptvKk0JTbRgaJOfL2qMqGvBEZG7Z6g==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "6.4.0"
+
+"@fortawesome/free-regular-svg-icons@^6.4.0":
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-regular-svg-icons/-/free-regular-svg-icons-6.4.0.tgz#cacc53bd8d832d46feead412d9ea9ce80a55e13a"
+  integrity sha512-ZfycI7D0KWPZtf7wtMFnQxs8qjBXArRzczABuMQqecA/nXohquJ5J/RCR77PmY5qGWkxAZDxpnUFVXKwtY/jPw==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "6.4.0"
+
+"@fortawesome/free-solid-svg-icons@^6.4.0":
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-6.4.0.tgz#48c0e790847fa56299e2f26b82b39663b8ad7119"
+  integrity sha512-kutPeRGWm8V5dltFP1zGjQOEAzaLZj4StdQhWVZnfGFCvAPVvHh8qk5bRrU4KXnRRRNni5tKQI9PBAdI6MP8nQ==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "6.4.0"
+
+"@fortawesome/vue-fontawesome@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@fortawesome/vue-fontawesome/-/vue-fontawesome-3.0.3.tgz#633e2998d11f7d4ed41f0d5ea461a22ec9b9d034"
+  integrity sha512-KCPHi9QemVXGMrfuwf3nNnNo129resAIQWut9QTAMXmXqL2ErABC6ohd2yY5Ipq0CLWNbKHk8TMdTXL/Zf3ZhA==
+
 "@humanwhocodes/config-array@^0.11.10":
   version "0.11.10"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.10.tgz#5a3ffe32cc9306365fb3fd572596cd602d5e12d2"
@@ -2086,7 +2124,7 @@ chalk@^5.2.0, chalk@^5.3.0:
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-5.3.0.tgz#67c20a7ebef70e7f3970a01f90fa210cb6860385"
   integrity sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==
 
-chokidar@^3.5.1, chokidar@^3.5.3:
+"chokidar@>=3.0.0 <4.0.0", chokidar@^3.5.1, chokidar@^3.5.3:
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.3.tgz#1cf37c8707b932bd1af1ae22c0432e2acd1903bd"
   integrity sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==
@@ -3665,6 +3703,11 @@ ignore@^5.1.1, ignore@^5.2.0, ignore@^5.2.4:
   version "5.2.4"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.2.4.tgz#a291c0c6178ff1b960befe47fcdec301674a6324"
   integrity sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==
+
+immutable@^4.0.0:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/immutable/-/immutable-4.3.1.tgz#17988b356097ab0719e2f741d56f3ec6c317f9dc"
+  integrity sha512-lj9cnmB/kVS0QHsJnYKD1uo3o39nrbKxszjnqS9Fr6NB7bZzW45U6WSGBPKXDL/CvDKqDNPA4r3DoDQ8GTxo2A==
 
 import-fresh@^3.2.1:
   version "3.3.0"
@@ -5424,6 +5467,15 @@ safe-regex@^2.1.1:
   dependencies:
     regexp-tree "~0.1.1"
 
+sass@^1.64.1:
+  version "1.64.1"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.64.1.tgz#6a46f6d68e0fa5ad90aa59ce025673ddaa8441cf"
+  integrity sha512-16rRACSOFEE8VN7SCgBu1MpYCyN7urj9At898tyzdXFhC+a+yOX5dXwAR7L8/IdPJ1NB8OYoXmD55DM30B2kEQ==
+  dependencies:
+    chokidar ">=3.0.0 <4.0.0"
+    immutable "^4.0.0"
+    source-map-js ">=0.6.2 <2.0.0"
+
 scule@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/scule/-/scule-1.0.0.tgz#895e6f4ba887e78d8b9b4111e23ae84fef82376d"
@@ -5545,7 +5597,7 @@ smob@^1.0.0:
   resolved "https://registry.yarnpkg.com/smob/-/smob-1.4.0.tgz#ac9751fe54b1fc1fc8286a628d4e7f824273b95a"
   integrity sha512-MqR3fVulhjWuRNSMydnTlweu38UhQ0HXM4buStD/S3mc/BzX3CuM9OmhyQpmtYCvoYdl5ris6TI0ZqH355Ymqg==
 
-source-map-js@^1.0.1, source-map-js@^1.0.2:
+"source-map-js@>=0.6.2 <2.0.0", source-map-js@^1.0.1, source-map-js@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.0.2.tgz#adbc361d9c62df380125e7f161f71c826f1e490c"
   integrity sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==

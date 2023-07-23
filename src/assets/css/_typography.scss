@@ -1,0 +1,57 @@
+// Heading
+$font-size-heading-1: 32px;
+$font-size-heading-2: 28px;
+$font-size-heading-3: 24px;
+$font-size-heading-4: 20px;
+
+// Content
+$font-size-xl: 18px; // = Title
+$font-size-default: 16px; // = Body 1
+$font-size-l: 14px; // = Body 2
+$font-size-m: 12px; // = Caption 1
+$font-size-s: 10px; // = Caption 2
+$font-size-xs: 8px; // = Caption 3
+
+// Line heights Content
+$font-line-height-xl: 1.5;
+$font-line-height-l: 1.44;
+$font-line-height-m: 1.43;
+$font-line-height-s: 1.4;
+$font-line-height-default: 1.57;
+$font-line-height-xs: 1.33;
+
+// Line heights Heading
+$font-line-height-heading-1: $font-line-height-default;
+$font-line-height-heading-2: 1.36;
+$font-line-height-heading-3: 1.42;
+$font-line-height-heading-4: $font-line-height-s;
+
+// Font weights
+$font-weight-semi-bold: 600;
+$font-weight-bold: bold;
+
+// Fonts ======
+
+// Body default
+@mixin font-default {
+  font-display: swap;
+  font-family: "Open Sans", sans-serif;
+  font-size: $font-size-default;
+  font-weight: normal;
+  line-height: $font-line-height-default;
+}
+
+%font-default {
+  @include font-default;
+}
+
+// Body default small
+@mixin font-default-small {
+  @include font-default;
+  font-size: $font-size-l;
+  line-height: $font-line-height-default;
+}
+
+%font-default-small {
+  @include font-default-small;
+}
