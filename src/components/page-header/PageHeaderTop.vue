@@ -16,8 +16,11 @@ export default defineComponent({
   <div :class="bem()">
     <div :class="bem('container')">
       <div :class="bem('contacts')">
-        <FontIcon alias="phone" label="000-000-000" />
         <FontIcon alias="envelope" label="email@email.com" />
+      </div>
+
+      <div :class="bem('topHeaderTitle')">
+        <h1>{{ $t("globals.greeting") }}</h1>
       </div>
 
       <div :class="bem('socialLang')">
@@ -26,7 +29,6 @@ export default defineComponent({
             >{{ $t("components.topHeader.follow") }}:
           </span>
           <FontIcon alias="facebook" type="fab" />
-          <FontIcon alias="youtube" type="fab" />
         </div>
 
         <LanguageSelect />
@@ -54,6 +56,7 @@ export default defineComponent({
 
   &-socialLang,
   &-socialContainer,
+  &-topHeaderTitle,
   &-contacts {
     color: $color-white;
     display: flex;
