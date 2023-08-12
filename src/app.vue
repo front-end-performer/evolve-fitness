@@ -2,10 +2,6 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  components: {
-    PageHeaderTop: () /* webpackPrefetch: true */ =>
-      import("@/components/page-header/PageHeaderTop.vue"),
-  },
   setup() {
     return {};
   },
@@ -13,9 +9,5 @@ export default defineComponent({
 </script>
 
 <template>
-  <main id="app">
-    <ClientOnly>
-      <PageHeaderTop />
-    </ClientOnly>
-  </main>
+  <main id="app">Welcome</main>
 </template>
