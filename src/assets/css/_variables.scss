@@ -1,3 +1,9 @@
+// Breakpoints
+$breakpoint-xsmall: 320px;
+$breakpoint-small: 360px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1280px;
+
 // Spacing
 $space-xxl: 32px;
 $space-xl: 24px;
@@ -8,3 +14,7 @@ $space-xs: 4px;
 
 // form field height
 $form-field-height: 44px;
+
+// Default rounded border radius
+$rounded-default-radius: 8px;
+$rounded-small-radius: 4px;

@@ -1,13 +1,26 @@
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, onBeforeMount } from "vue";
 
 export default defineComponent({
+  components: {
+    PageHeaderTop: () /* webpackPrefetch: true */ =>
+      import("@/components/page-header/PageHeaderTop.vue"),
+  },
   setup() {
-    return {};
+    const { finalizePendingLocaleChange } = useI18n();
+
+    onBeforeMount(() => {
+      finalizePendingLocaleChange();
+    });
   },
 });
 </script>
 
 <template>
-  <main id="app">Welcome</main>
+  <main id="app">
+    <ClientOnly>
+      <PageHeaderTop />
+      <NuxtPage />
+    </ClientOnly>
+  </main>
 </template>
