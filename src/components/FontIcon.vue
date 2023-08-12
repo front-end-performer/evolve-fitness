@@ -59,9 +59,5 @@ export default defineComponent({
 
   align-items: center;
   display: flex;
-
-  &-awesomeIcon {
-    padding-right: $space-l;
-  }
 }
 </style>

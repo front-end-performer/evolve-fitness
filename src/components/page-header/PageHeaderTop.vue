@@ -19,11 +19,13 @@ export default defineComponent({
   <div :class="bem()">
     <div :class="bem('container')">
       <div :class="bem('contacts')">
-        <FontIcon alias="envelope" label="email@email.com" />
+        <NuxtLink to="/" :class="bem('link')"
+          ><FontIcon :class="bem('icon')" alias="vuejs" type="fab"
+        /></NuxtLink>
       </div>
 
       <div :class="bem('topHeaderTitle')">
-        <h1>{{ $t("globals.greeting") }}</h1>
+        <h1>{{ $t("globals.greeting") }} {{ $route.name }}</h1>
       </div>
 
       <div :class="bem('socialLang')">
@@ -31,10 +33,11 @@ export default defineComponent({
           <span v-if="!isMobile" :class="bem('social')"
             >{{ $t("components.topHeader.follow") }}:
           </span>
-          <FontIcon alias="facebook" type="fab" />
+          <FontIcon :class="bem('icon')" alias="facebook" type="fab" />
         </div>
 
-        <LanguageSelect />
+        <LanguageSelect :class="bem('languageContainer')" />
+        <FontIcon alias="user" :class="bem('login')" />
       </div>
     </div>
   </div>
@@ -73,8 +76,22 @@ export default defineComponent({
     padding-right: $space-m;
   }
 
-  &-languageSelector {
-    padding-left: $space-m;
+  &-languageContainer {
+    padding-right: $space-l;
+  }
+
+  &-icon :deep(.FontIcon-awesomeIcon) {
+    padding-right: $space-l;
+  }
+
+  &-login,
+  &-icon {
+    cursor: pointer;
+  }
+
+  &-link {
+    color: $color-white;
+    display: flex;
   }
 }
 </style>
