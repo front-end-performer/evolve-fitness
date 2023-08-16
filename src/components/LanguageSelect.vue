@@ -80,13 +80,10 @@ export default defineComponent({
   display: flex;
   position: relative;
   outline: none;
+  border: 1px solid red;
 
   &-select {
     @include input;
-
-    cursor: pointer;
-    outline: none;
-    padding: 0;
   }
 
   &-selected {
