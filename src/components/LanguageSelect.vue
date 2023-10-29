@@ -83,10 +83,6 @@ export default defineComponent({
 
   &-select {
     @include input;
-
-    cursor: pointer;
-    outline: none;
-    padding: 0;
   }
 
   &-selected {

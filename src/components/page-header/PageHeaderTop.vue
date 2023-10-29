@@ -37,7 +37,9 @@ export default defineComponent({
         </div>
 
         <LanguageSelect :class="bem('languageContainer')" />
-        <FontIcon alias="user" :class="bem('login')" />
+        <span :class="bem('profileIcon')"
+          >Sign in <FontIcon alias="user" :class="bem('login')"
+        /></span>
       </div>
     </div>
   </div>
@@ -80,8 +82,21 @@ export default defineComponent({
     padding-right: $space-l;
   }
 
+  &-profileIcon {
+    align-items: center;
+    display: flex;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   &-icon :deep(.FontIcon-awesomeIcon) {
     padding-right: $space-l;
+  }
+
+  &-login {
+    padding-left: $space-m;
   }
 
   &-login,
