@@ -80,7 +80,6 @@ export default defineComponent({
   display: flex;
   position: relative;
   outline: none;
-  border: 1px solid red;
 
   &-select {
     @include input;

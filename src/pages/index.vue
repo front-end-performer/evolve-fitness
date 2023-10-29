@@ -3,7 +3,7 @@ import { defineComponent } from "vue";
 import { useBem } from "@/utilities/bem";
 
 export default defineComponent({
-  components: {},
+  middleware: "auth",
   setup() {
     const bem = useBem("HomePage");
 
@@ -13,9 +13,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div :class="bem()">
-    <h1>{{ $t("globals.greeting") }} Home</h1>
-  </div>
+  <div :class="bem()">Index</div>
 </template>
 
 <style lang="scss" scoped>

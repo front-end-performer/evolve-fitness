@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     "~/assets/css/resets.css",
     "@fortawesome/fontawesome-svg-core/styles.css",
   ],
-  modules: ["@nuxtjs/i18n"],
+  modules: ["@nuxtjs/i18n", "@nuxtjs/supabase"],
   plugins: [{ src: "./src/plugins/fontAwesome.ts" }],
   i18n: {
     defaultLocale: "en",
@@ -26,6 +26,14 @@ export default defineNuxtConfig({
       { code: "en", file: "en.js" },
       { code: "de", file: "de.js" },
     ],
+  },
+  supabase: {
+    redirectOptions: {
+      login: "/",
+      callback: "/confirm",
+    },
+    key: process.env.SUPABASE_KEY,
+    url: process.env.SUPABASE_URL,
   },
   app: {
     head: {
