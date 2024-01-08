@@ -1,0 +1,105 @@
+@import './variables';
+
+$last-medium-width: calc(#{$breakpoint-large} - 1px);
+$last-small-width: calc(#{$breakpoint-medium} - 1px);
+$last-xsmall-width: calc(#{$breakpoint-small} - 1px);
+
+@mixin xsmall {
+  @media screen and (max-width: $last-xsmall-width) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media screen and (max-width: $last-small-width) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (min-width: $breakpoint-medium) and (max-width: $last-medium-width) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media screen and (min-width: $breakpoint-large) {
+    @content;
+  }
+}
+
+@mixin show-until-large {
+  display: none;
+  @media screen and (max-width: $last-medium-width) {
+    @content;
+  }
+}
+
+@mixin show-only-large {
+  display: none;
+  @include large {
+    @content;
+  }
+}
+
+@mixin hide-on-small {
+  @media screen and (max-width: $last-small-width) {
+    display: none;
+  }
+}
+
+@mixin from-medium {
+  @media screen and (min-width: $breakpoint-medium) {
+    @content;
+  }
+}
+
+@mixin from-large {
+  @media screen and (min-width: $breakpoint-large) {
+    @content;
+  }
+}
+
+@mixin until-large {
+  @media screen and (max-width: $last-medium-width) {
+    @content;
+  }
+}
+
+@mixin show-until-large {
+  display: none;
+  @media screen and (max-width: $last-medium-width) {
+    @content;
+  }
+}
+
+@mixin show-only-large {
+  display: none;
+  @include large {
+    @content;
+  }
+}
+
+@mixin hide-on-small {
+  @media screen and (max-width: $last-small-width) {
+    display: none;
+  }
+}
+
+@mixin from-medium-to-large {
+  @media screen and (min-width: $breakpoint-medium) {
+    @content;
+  }
+}
+
+@mixin from-small-to-large {
+  @media screen and (max-width: $last-medium-width) {
+    @content;
+  }
+}
+
+@mixin landscape {
+  @media screen and (max-width: 897px) and (orientation: landscape) {
+    @content;
+  }
+}

@@ -3,7 +3,6 @@ import { defineComponent } from "vue";
 import { useBem } from "@/utilities/bem";
 
 export default defineComponent({
-  middleware: "auth",
   setup() {
     const bem = useBem("HomePage");
 
@@ -26,6 +25,6 @@ export default defineComponent({
   border: 2px solid gold;
   display: flex;
   justify-content: center;
-  height: calc(100vh - 49.5px);
+  height: calc(200vh - 49.5px);
 }
 </style>

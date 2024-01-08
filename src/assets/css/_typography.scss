@@ -1,8 +1,7 @@
-// Heading
-$font-size-heading-1: 32px;
-$font-size-heading-2: 28px;
-$font-size-heading-3: 24px;
-$font-size-heading-4: 20px;
+// KFB Foundation 2.1
+// https://app.zeplin.io/styleguide/60086dc27b14c6a66932ace2/textstyles
+
+@import './colors';
 
 // Content
 $font-size-xl: 18px; // = Title
@@ -12,7 +11,18 @@ $font-size-m: 12px; // = Caption 1
 $font-size-s: 10px; // = Caption 2
 $font-size-xs: 8px; // = Caption 3
 
-// Line heights Content
+// Heading
+$font-size-heading-hero: 42px;
+$font-size-heading-1: 32px;
+$font-size-heading-2: 28px;
+$font-size-heading-3: 24px;
+$font-size-heading-4: 20px;
+
+// Hero
+$font-size-hero-l: 52px;
+$font-size-hero-m: 42px;
+
+// Line heights content
 $font-line-height-xl: 1.5;
 $font-line-height-l: 1.44;
 $font-line-height-m: 1.43;
@@ -20,8 +30,8 @@ $font-line-height-s: 1.4;
 $font-line-height-default: 1.57;
 $font-line-height-xs: 1.33;
 
-// Line heights Heading
-$font-line-height-heading-1: $font-line-height-default;
+// Line heights heading
+$font-line-height-heading-1: 1.36;
 $font-line-height-heading-2: 1.36;
 $font-line-height-heading-3: 1.42;
 $font-line-height-heading-4: $font-line-height-s;
@@ -30,12 +40,12 @@ $font-line-height-heading-4: $font-line-height-s;
 $font-weight-semi-bold: 600;
 $font-weight-bold: bold;
 
-// Fonts ======
+// Fonts
 
-// Body default
+// Body 1 regular
 @mixin font-default {
   font-display: swap;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: $font-size-default;
   font-weight: normal;
   line-height: $font-line-height-default;
@@ -45,7 +55,27 @@ $font-weight-bold: bold;
   @include font-default;
 }
 
-// Body default small
+// Body 1 semi bold
+@mixin font-default-semi-bold {
+  @include font-default;
+  font-weight: $font-weight-semi-bold;
+}
+
+%font-default-semi-bold {
+  @include font-default-semi-bold;
+}
+
+// Body 1 bold
+@mixin font-default-bold {
+  @include font-default;
+  font-weight: $font-weight-bold;
+}
+
+%font-default-bold {
+  @include font-default-bold;
+}
+
+// Body 2 regular
 @mixin font-default-small {
   @include font-default;
   font-size: $font-size-l;
@@ -54,4 +84,208 @@ $font-weight-bold: bold;
 
 %font-default-small {
   @include font-default-small;
+}
+
+// Body 2 semi bold
+@mixin font-default-small-semi-bold {
+  @include font-default-small;
+  font-weight: $font-weight-semi-bold;
+}
+
+%font-default-small-semi-bold {
+  @include font-default-small-semi-bold;
+}
+
+// Body 2 bold
+@mixin font-default-small-bold {
+  @include font-default-small;
+  font-weight: $font-weight-bold;
+}
+
+%font-default-small-bold {
+  @include font-default-small-bold;
+}
+
+// H1 Bold
+@mixin font-heading-1 {
+  @include font-default-bold;
+  font-size: $font-size-heading-1;
+  line-height: $font-line-height-heading-1;
+}
+
+%font-heading-1 {
+  @include font-heading-1;
+}
+
+// H2 Bold
+@mixin font-heading-2 {
+  @include font-default-bold;
+  font-size: $font-size-heading-2;
+  line-height: $font-line-height-heading-2;
+}
+
+%font-heading-2 {
+  @include font-heading-2;
+}
+
+// H3 Bold
+@mixin font-heading-3 {
+  @include font-default-bold;
+  font-size: $font-size-heading-3;
+  line-height: $font-line-height-heading-3;
+}
+
+%font-heading-3 {
+  @include font-heading-3;
+}
+
+// H4 Bold
+@mixin font-heading-4 {
+  @include font-default-bold;
+  font-size: $font-size-heading-4;
+  line-height: $font-line-height-heading-4;
+}
+
+%font-heading-4 {
+  @include font-heading-4;
+}
+
+// Title regular
+@mixin font-title-regular {
+  @extend %font-default;
+  font-size: $font-size-xl;
+  line-height: $font-line-height-l;
+}
+
+%font-title-regular {
+  @include font-title-regular;
+}
+
+// Title semi bold
+@mixin font-title-semi-bold {
+  @include font-default-semi-bold;
+  font-size: $font-size-xl;
+  line-height: $font-line-height-l;
+}
+
+%font-title-semi-bold {
+  @include font-title-semi-bold;
+}
+
+// Title bold
+@mixin font-title-bold {
+  @include font-default-bold;
+  font-size: $font-size-xl;
+  line-height: $font-line-height-l;
+}
+
+%font-title-bold {
+  @include font-title-bold;
+}
+
+// Caption 1 regular
+@mixin font-label-default {
+  @include font-default;
+  font-size: $font-size-m;
+  line-height: $font-line-height-xs;
+}
+
+%font-label-default {
+  @include font-label-default;
+}
+
+// Caption 1 semi bold
+@mixin font-label-default-semi-bold {
+  @include font-label-default;
+  font-weight: $font-weight-semi-bold;
+}
+
+%font-label-default-semi-bold {
+  @include font-label-default-semi-bold;
+}
+
+// Caption 1 bold
+@mixin font-label-default-bold {
+  @include font-label-default;
+  font-weight: $font-weight-bold;
+}
+
+%font-label-default-bold {
+  @include font-label-default-bold;
+}
+
+// Caption 2 regular
+@mixin font-label-small {
+  @extend %font-label-default;
+  font-size: $font-size-s;
+  line-height: $font-line-height-s;
+}
+
+%font-label-small {
+  @include font-label-small;
+}
+
+// Caption 2 semi bold
+@mixin font-label-small-semi-bold {
+  @include font-label-small;
+  font-weight: $font-weight-semi-bold;
+}
+
+%font-label-small-semi-bold {
+  @include font-label-small-semi-bold;
+}
+
+// Caption 2 bold
+@mixin font-label-small-bold {
+  @include font-label-small;
+  font-weight: $font-weight-bold;
+}
+
+%font-label-small-bold {
+  @include font-label-small-bold;
+}
+
+// Caption 3 regular
+%font-label-xs {
+  @extend %font-label-default;
+  font-size: $font-size-xs;
+  line-height: $font-line-height-xl;
+}
+
+// Caption 3 semi bold
+%font-label-xs-semi-bold {
+  @extend %font-label-xs;
+  font-weight: $font-weight-semi-bold;
+}
+
+// Caption 3 bold
+%font-label-xs-bold {
+  @extend %font-label-xs;
+  font-weight: $font-weight-bold;
+}
+
+%font-tertiary-input {
+  @extend %font-default-small-semi-bold;
+  color: $color-tertiary-700;
+  font-size: $font-size-l;
+}
+
+%font-navigation {
+  @extend %font-default-small-bold;
+  color: $color-black;
+  font-size: $font-size-l;
+  text-transform: uppercase;
+}
+
+%font-navigation-semi-bold {
+  @extend %font-navigation;
+  font-weight: $font-weight-semi-bold;
+}
+
+// Clearleft
+%clearleft-font-hartwell-bold {
+  font-family: hartwellbold, Trebuchet MS, sans-serif;
+}
+%clearleft-font-hartwell-semibold {
+  font-family: hartwellsemibold, Trebuchet MS, sans-serif;
 }

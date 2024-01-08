@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     "~/assets/css/resets.css",
     "@fortawesome/fontawesome-svg-core/styles.css",
   ],
-  modules: ["@nuxtjs/i18n", "@nuxtjs/supabase"],
+  modules: ["@nuxtjs/i18n", "@hypernym/nuxt-gsap"],
   plugins: [{ src: "./src/plugins/fontAwesome.ts" }],
   i18n: {
     defaultLocale: "en",
@@ -27,13 +27,12 @@ export default defineNuxtConfig({
       { code: "de", file: "de.js" },
     ],
   },
-  supabase: {
-    redirectOptions: {
-      login: "/",
-      callback: "/confirm",
+  gsap: {
+    composables: true,
+    provide: false, // recomended is composable is true disable - global import
+    extraPlugins: {
+      scrollTrigger: true,
     },
-    key: process.env.SUPABASE_KEY,
-    url: process.env.SUPABASE_URL,
   },
   app: {
     head: {

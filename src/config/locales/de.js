@@ -3,8 +3,13 @@ export default {
     greeting: "Willkommen",
   },
   components: {
-    topHeader: {
-      follow: "Folgen",
+    nav: {
+      home: "Home",
+      about: "Über uns",
+      courses: "Kurse",
+      prices: "Preise",
+      events: "Events",
+      contacts: "Kontakte",
     },
   },
 };

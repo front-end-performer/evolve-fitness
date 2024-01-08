@@ -1,29 +1,15 @@
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent } from "vue";
 import { useBem } from "@/utilities/bem";
+import BasicHeader from "@/components/header/BasicHeader.vue";
 
 export default defineComponent({
   components: {
-    PageHeaderTop: () /* webpackPrefetch: true */ =>
-      import("@/components/page-header/PageHeaderTop.vue"),
+    BasicHeader,
   },
   setup() {
     const bem = useBem("Main");
     const { finalizePendingLocaleChange } = useI18n();
-    // const supabase = useSupabaseClient();
-    // const img = ref("");
-
-    useAsyncData(async () => {
-      // const { data: mockdata, error } = await supabase
-      //   .from("mockdata")
-      //   .select("label");
-      // console.log(mockdata);
-      // const { data } = supabase.storage
-      //   .from("avatars")
-      //   .getPublicUrl("logo.png");
-      // console.log(data.publicUrl);
-      // img.value = data.publicUrl;
-    });
 
     onBeforeMount(() => {
       finalizePendingLocaleChange();
@@ -37,7 +23,7 @@ export default defineComponent({
 <template>
   <main id="app">
     <ClientOnly>
-      <PageHeaderTop />
+      <BasicHeader />
       <NuxtPage />
     </ClientOnly>
   </main>
