@@ -58,11 +58,11 @@ export default defineComponent({
         "
       >
         {{ option.type }}
-        <nuxt-img
+        <!-- <nuxt-img
           :class="bem('itemiconFlag')"
           :src="option.icon"
           :alt="`${option.type} hi-tab intensive training`"
-        />
+        /> -->
       </div>
     </div>
   </div>
@@ -107,7 +107,7 @@ export default defineComponent({
     }
 
     &--open {
-      border: 1px solid $color-gold;
+      border: 1px solid $color-white;
       border-radius: $rounded-small-radius $rounded-small-radius 0 0;
     }
   }
@@ -115,11 +115,11 @@ export default defineComponent({
   &-items {
     border-radius: 0 0 $rounded-small-radius $rounded-small-radius;
     overflow: hidden;
-    border-right: 1px solid $color-gold;
-    border-left: 1px solid $color-gold;
-    border-bottom: 1px solid $color-gold;
+    border-right: 1px solid $color-white;
+    border-left: 1px solid $color-white;
+    border-bottom: 1px solid $color-white;
     position: absolute;
-    background-color: $color-black;
+    background-color: #364d5e;
     left: 0;
     right: 0;
     top: 100%;
@@ -141,7 +141,7 @@ export default defineComponent({
     user-select: none;
 
     &:hover {
-      background-color: $color-gold;
+      background-color: $color-main;
     }
 
     &iconFlag {

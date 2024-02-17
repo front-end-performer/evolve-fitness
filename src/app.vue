@@ -2,10 +2,12 @@
 import { defineComponent } from "vue";
 import { useBem } from "@/utilities/bem";
 import BasicHeader from "@/components/header/BasicHeader.vue";
+import BasicFooter from "@/components/BasicFooter.vue";
 
 export default defineComponent({
   components: {
     BasicHeader,
+    BasicFooter,
   },
   setup() {
     const bem = useBem("Main");
@@ -25,6 +27,7 @@ export default defineComponent({
     <ClientOnly>
       <BasicHeader />
       <NuxtPage />
+      <BasicFooter />
     </ClientOnly>
   </main>
 </template>

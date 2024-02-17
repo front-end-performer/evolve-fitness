@@ -14,12 +14,12 @@ export default defineComponent({
       {
         icon: "fa-phone-alt",
         type: "tel:",
-        value: "+4900000000000",
+        value: "+(49) 151 64072 188",
       },
       {
         icon: "fa-envelope",
         type: "mailto:",
-        value: "test@test.de",
+        value: "now-evolve@gmail.com",
       },
     ];
 
@@ -49,7 +49,11 @@ export default defineComponent({
           :class="bem('contact')"
           :href="contact.type + contact.value"
         >
-          <FontIcon :class="bem('icon')" :alias="contact.icon" type="fa" />
+          <FontIcon
+            :class="bem('contactIcon')"
+            :alias="contact.icon"
+            type="fa"
+          />
           <span v-if="!isMobile">{{ contact.value }}</span></a
         >
       </div>
@@ -88,7 +92,7 @@ export default defineComponent({
 
   &-headerTop {
     align-items: center;
-    background-color: $color-tertiary-900;
+    background-color: #364d5e;
     color: $color-white;
     display: flex;
     padding: $space-xs $space-xl;
@@ -106,6 +110,10 @@ export default defineComponent({
     color: $color-white;
     display: flex;
     gap: $space-s;
+
+    &Icon {
+      @include font-label-default;
+    }
   }
 
   &-socials {
@@ -115,7 +123,7 @@ export default defineComponent({
   }
 
   &-icon {
-    @include font-label-default;
+    @include font-default;
 
     color: $color-white;
   }

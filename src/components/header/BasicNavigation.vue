@@ -12,7 +12,7 @@ export default defineComponent({
 
     onMounted(() => {
       useGsap.to(".Navigation", {
-        backgroundColor: "rgba(255, 255, 255, 0.5)",
+        backgroundColor: "rgba(255, 255, 255)",
         duration: 0.5,
         transition: "all 200ms ease",
         position: "fixed",
@@ -21,6 +21,21 @@ export default defineComponent({
         left: 0,
         scrollTrigger: {
           trigger: ".Navigation",
+          start: "32px 32px",
+          end: "32px 32px",
+          scrub: 0,
+          // markers: true,
+        },
+      });
+      useGsap.to(".Navigation-logo", {
+        duration: 0.5,
+        transition: "all 500ms ease",
+        height: "96px",
+        width: "96px",
+        position: "absolute",
+        left: "24px",
+        scrollTrigger: {
+          trigger: ".Navigation-logo",
           start: "32px 32px",
           end: "32px 32px",
           scrub: 0,
@@ -45,13 +60,21 @@ export default defineComponent({
     </div>
 
     <div v-if="!isMobile" :class="bem('navigationRight')">
-      <a :class="bem('navLeft')" href=""> {{ $t("components.nav.home") }}</a>
-      <a :class="bem('navLeft')" href=""> {{ $t("components.nav.about") }}</a>
-      <a :class="bem('navLeft')" href=""> {{ $t("components.nav.courses") }}</a>
-      <a :class="bem('navRight')" href=""> {{ $t("components.nav.prices") }}</a>
-      <a :class="bem('navRight')" href=""> {{ $t("components.nav.events") }}</a>
-      <a :class="bem('navRight')" href="">
-        {{ $t("components.nav.contacts") }}</a
+      <router-link :class="bem('navLeft')" to="/">
+        {{ $t("components.nav.home") }}</router-link
+      >
+      <router-link :class="bem('navLeft')" to="/#about">
+        {{ $t("components.nav.about") }}</router-link
+      >
+      <router-link :class="bem('navLeft')" to="/#courses">
+        {{ $t("components.nav.courses") }}</router-link
+      >
+      <router-link :class="bem('navRight')" to="/#team">
+        {{ $t("components.nav.team") }}</router-link
+      >
+      <!-- <router-link :class="bem('navRight')" to="/#events"> {{ $t("components.nav.events") }}</router-link> -->
+      <router-link :class="bem('navRight')" to="/#contacts">
+        {{ $t("components.nav.contacts") }}</router-link
       >
     </div>
 
@@ -78,7 +101,7 @@ export default defineComponent({
   justify-content: space-between;
   padding: $space-l $space-xl;
   position: relative;
-  height: 120px;
+  // height: auto;
 
   &-navLeft,
   &-navRight {
@@ -92,12 +115,18 @@ export default defineComponent({
   &-navLeft:hover,
   &-navRight:hover {
     color: $color-main;
+    font-weight: 400;
+    text-decoration: underline;
   }
 
   &-navigationRight {
     align-items: center;
+    background-color: rgba($color: #fff, $alpha: 0.6);
+    border-radius: 8px;
     display: flex;
     gap: $space-xl;
+    padding: $space-l;
+    height: fit-content;
 
     @include large {
       gap: $space-3xl;
@@ -106,8 +135,13 @@ export default defineComponent({
 
   &-logo {
     height: 120px;
-    width: 100%;
+    width: 120px;
   }
+
+  // &-logo:hover {
+  //   border-radius: 50%;
+  //   box-shadow: 2px 3px 18px #fcf8f3;
+  // }
 
   &-mobileMenu {
     background-color: $color-secondary;

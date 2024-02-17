@@ -8,6 +8,7 @@ export default {
       about: "About us",
       courses: "Courses",
       prices: "Prices",
+      team: "Our Team",
       events: "Events",
       contacts: "Contacts",
     },

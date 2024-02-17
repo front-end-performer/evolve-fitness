@@ -6,7 +6,9 @@ import {
   faUser,
   faBars,
   faXmark,
+  faDumbbell,
 } from "@fortawesome/free-solid-svg-icons";
+import { faClock } from "@fortawesome/free-regular-svg-icons";
 import {
   faFacebook,
   faInstagram,
@@ -30,6 +32,8 @@ library.add(
   faEnvelope,
   faBars,
   faXmark,
+  faDumbbell,
+  faClock,
 );
 
 export default defineNuxtPlugin((nuxtApp) => {
