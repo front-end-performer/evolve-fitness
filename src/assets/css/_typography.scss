@@ -150,6 +150,13 @@ $font-weight-bold: bold;
   @include font-heading-4;
 }
 
+// Hero
+@mixin font-heading-hero {
+  @include font-default-bold;
+  font-size: $font-size-hero-l;
+  line-height: $font-line-height-heading-3;
+}
+
 // Title regular
 @mixin font-title-regular {
   @extend %font-default;

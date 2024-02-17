@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     "~/assets/css/resets.css",
     "@fortawesome/fontawesome-svg-core/styles.css",
   ],
-  modules: ["@nuxtjs/i18n", "@hypernym/nuxt-gsap"],
+  modules: ["@nuxtjs/i18n", "@hypernym/nuxt-gsap", "vue3-carousel-nuxt"],
   plugins: [{ src: "./src/plugins/fontAwesome.ts" }],
   i18n: {
     defaultLocale: "en",

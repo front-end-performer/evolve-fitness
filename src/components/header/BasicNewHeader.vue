@@ -6,25 +6,31 @@ import BasicSideMenu from "@/components/BasicSideMenu.vue";
 export default defineComponent({
   components: { BasicSideMenu },
   setup() {
-    const bem = useBem("Navigation");
+    const bem = useBem("BasicNewHeader");
     const { isMobile } = useBreakPoints();
     const open = ref(false);
 
     onMounted(() => {
-      useGsap.to(".Navigation", {
-        backgroundColor: "rgba(255, 255, 255, 0.5)",
+      useGsap.to(".BasicNewHeader", {
+        backgroundColor: "rgba(255, 255, 255, 0.8)",
         duration: 0.5,
         transition: "all 200ms ease",
-        position: "fixed",
-        top: 0,
-        right: 0,
-        left: 0,
         scrollTrigger: {
-          trigger: ".Navigation",
-          start: "32px 32px",
-          end: "32px 32px",
+          trigger: ".BasicNewHeader-logoContainer",
+          start: "24px 24px",
+          end: "24px 24px",
           scrub: 0,
           // markers: true,
+        },
+      });
+      useGsap.to([".BasicNewHeader", ".BasicNewHeader-logo"], {
+        height: "120px",
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: [".BasicNewHeader-logoContainer", ".BasicNewHeader-logo"],
+          start: "24px 24px",
+          end: "24px 24px",
+          scrub: 0,
         },
       });
     });
@@ -73,16 +79,21 @@ export default defineComponent({
 
 /** define Navigation */
 
-.Navigation {
+.BasicNewHeader {
   display: flex;
   justify-content: space-between;
-  padding: $space-l $space-xl;
-  position: relative;
-  height: 120px;
+  padding: $space-xl;
+  padding-left: $space-3xl;
+  padding-right: $space-3xl;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 
   &-navLeft,
   &-navRight {
-    @include font-default;
+    @include font-default-bold;
 
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -97,15 +108,22 @@ export default defineComponent({
   &-navigationRight {
     align-items: center;
     display: flex;
-    gap: $space-xl;
+    gap: $space-3xl;
 
-    @include large {
-      gap: $space-3xl;
+    @include medium {
+      gap: $space-xl;
     }
   }
 
+  &-logoContainer {
+    // background-color: $color-gold;
+    border-radius: 50%;
+    height: 92px;
+    // box-shadow: 0 0 20px 4px $color-gold;
+  }
+
   &-logo {
-    height: 120px;
+    height: 92px;
     width: 100%;
   }
 
