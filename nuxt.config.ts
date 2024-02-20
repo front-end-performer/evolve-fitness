@@ -2,6 +2,7 @@ import { isProdMode } from "./src/config/app";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  ssr: false,
   dev: !isProdMode,
   srcDir: "src",
   css: [
@@ -10,7 +11,12 @@ export default defineNuxtConfig({
     "@fortawesome/fontawesome-svg-core/styles.css",
   ],
   modules: ["@nuxtjs/i18n", "@hypernym/nuxt-gsap", "vue3-carousel-nuxt"],
-  plugins: [{ src: "./src/plugins/fontAwesome.ts" }],
+  plugins: ["./src/plugins/fontAwesome.ts"],
+  router: {
+    options: {
+      hashMode: false,
+    },
+  },
   i18n: {
     defaultLocale: "en",
     langDir: "config/locales",
