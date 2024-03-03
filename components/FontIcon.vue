@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useBem } from "@/utilities/bem";
+import { useBem } from "../utilities/bem";
 
 export default defineComponent({
   props: {

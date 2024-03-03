@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent, computed, ref, onMounted } from "vue";
-import { useBem } from "@/utilities/bem";
+import { useBem } from "../utilities/bem";
 
 export default defineComponent({
   setup() {

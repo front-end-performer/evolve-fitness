@@ -1,20 +1,33 @@
-import { isProdMode } from "./src/config/app";
+import { isProdMode } from "./config/app";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
   dev: !isProdMode,
-  srcDir: "src",
   css: [
     "~/assets/css/main.css",
     "~/assets/css/resets.css",
     "@fortawesome/fontawesome-svg-core/styles.css",
   ],
-  modules: ["@nuxtjs/i18n", "@hypernym/nuxt-gsap", "vue3-carousel-nuxt"],
-  plugins: ["./src/plugins/fontAwesome.ts"],
+  modules: [
+    "@nuxtjs/i18n",
+    "@hypernym/nuxt-gsap",
+    "vue3-carousel-nuxt",
+    "@nuxtjs/supabase",
+  ],
+  plugins: ["./plugins/fontAwesome.ts"],
   router: {
     options: {
       hashMode: false,
+    },
+  },
+  supabase: {
+    url: process.env.NUXT_PUBLIC_SUPABASE_URL,
+    key: process.env.NUXT_PUBLIC_SUPABASE_KEY,
+    serviceKey: process.env.NUXT_PUBLIC_SUPABASE_SERVICE_ROLE,
+    redirectOptions: {
+      login: "/",
+      callback: "/confirm",
     },
   },
   i18n: {

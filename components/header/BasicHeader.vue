@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useBem } from "@/utilities/bem";
+import { useBem } from "../../utilities/bem";
 import LanguageSelect from "@/components/LanguageSelect.vue";
 import FontIcon from "@/components/FontIcon.vue";
 import BasicNavigation from "@/components/header/BasicNavigation.vue";
@@ -13,12 +13,12 @@ export default defineComponent({
     const contacts = [
       {
         icon: "fa-phone-alt",
-        type: "tel:",
+        type: "https://wa.me/+4915164072188",
         value: "+(49) 151 64072 188",
       },
       {
         icon: "fa-envelope",
-        type: "mailto:",
+        type: "mailto:now-evolve@gmail.com",
         value: "now-evolve@gmail.com",
       },
     ];
@@ -47,7 +47,7 @@ export default defineComponent({
           v-for="(contact, index) in contacts"
           :key="index"
           :class="bem('contact')"
-          :href="contact.type + contact.value"
+          :href="contact.type"
         >
           <FontIcon
             :class="bem('contactIcon')"

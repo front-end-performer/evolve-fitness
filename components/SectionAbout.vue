@@ -1,27 +1,14 @@
-<script lang="ts">
-import { defineComponent } from "vue";
-import { useBem } from "@/utilities/bem";
-import BasicSection from "@/components/BasicSection.vue";
-import FontIcon from "@/components/FontIcon.vue";
+<script setup lang="ts">
+import { useBem } from "../utilities/bem";
 
-export default defineComponent({
-  components: {
-    BasicSection,
-    FontIcon,
-  },
-  setup() {
-    const bem = useBem("SectionAbout");
-
-    return { bem };
-  },
-});
+const bem = useBem("SectionAbout");
 </script>
 
 <template>
   <BasicSection id="about">
     <div :class="bem()">
       <div :class="bem('header')">
-        <h2 :class="bem('title')">That's why our clients trust Us</h2>
+        <h2 :class="bem('title')">Deshalb vertrauen uns unsere Kunden</h2>
         <p :class="bem('description')">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
           perferendis esse itaque saepe libero inventore reiciendis quae,

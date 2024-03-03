@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useBem } from "@/utilities/bem";
+import { useBem } from "../utilities/bem";
 import BasicSection from "@/components/BasicSection.vue";
 import FontIcon from "@/components/FontIcon.vue";
 
@@ -44,7 +44,9 @@ export default defineComponent({
           </p>
           <div :class="bem('important')">
             <p>
-              <a :class="bem('info', 'phone')" href="tel:+4915164072188"
+              <a
+                :class="bem('info', 'phone')"
+                href="https://wa.me/+4915164072188"
                 >+(49)151 640 72188</a
               >
             </p>
@@ -64,8 +66,8 @@ export default defineComponent({
       </div>
       <div :class="bem('divider')" />
       <div :class="bem('coopyrights')">
-        Copyright © {{ new Date().getFullYear() }} by Evolve Fitness. ALL
-        RIGHTS RESERVED
+        Urheberrechte © {{ new Date().getFullYear() }} by Evolve Fitness. ALLE
+        RECHTE VORBEHALTEN
       </div>
     </BasicSection>
   </div>

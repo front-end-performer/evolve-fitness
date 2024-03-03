@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useBem } from "@/utilities/bem";
+import { useBem } from "../utilities/bem";
 import BasicSection from "@/components/BasicSection.vue";
 // import FontIcon from "@/components/FontIcon.vue";
 

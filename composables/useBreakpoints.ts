@@ -12,7 +12,7 @@ import {
   onBeforeUnmount,
   nextTick,
 } from "vue";
-import { isServer } from "@/config/app";
+import { isServer } from "../config/app";
 
 interface BreakPoints {
   xsmall: number;

@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent, onMounted, ref } from "vue";
-import { useBem } from "@/utilities/bem";
+import { useBem } from "../../utilities/bem";
 import BasicSideMenu from "@/components/BasicSideMenu.vue";
 
 export default defineComponent({
