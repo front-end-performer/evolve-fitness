@@ -16,13 +16,10 @@ const { data } = await useFetch("/api/hero");
     >
       <div :class="bem('heroContent')">
         <h1 :class="bem('heroContentTitle')">
-          Unleash your body potential by stretching your mind and body
-          {{ data }}
+          {{ $t("section.hero.title") }}
         </h1>
         <p :class="bem('heroContentDescription')">
-          Our classes are created to help you shift your energy and build
-          internal strength that will last for a lifetime. They are inspired by
-          the fundamentals of Pilates and the love of movement.
+          {{ $t("section.hero.description") }}
         </p>
       </div>
     </div>

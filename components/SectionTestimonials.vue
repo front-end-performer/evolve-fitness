@@ -28,7 +28,7 @@ export default defineComponent({
   <BasicSection>
     <div :class="bem()">
       <div :class="bem('header')">
-        <h2 :class="bem('title')">What our customers saying about us</h2>
+        <h2 :class="bem('title')">{{ $t("section.testimonials.title") }}</h2>
       </div>
 
       <Carousel

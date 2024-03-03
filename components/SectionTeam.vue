@@ -20,12 +20,9 @@ export default defineComponent({
   <div id="team" :class="bem()">
     <BasicSection>
       <div :class="bem('header')">
-        <h2 :class="bem('title')">Our the best instructors for You</h2>
+        <h2 :class="bem('title')">{{ $t("section.team.title") }}</h2>
         <p :class="bem('description')">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
-          perferendis esse itaque saepe libero inventore reiciendis quae,
-          numquam laborum nostrum accusantium voluptatibus est voluptate ipsam
-          praesentium corporis odio fugiat? Amet!
+          {{ $t("section.team.description") }}
         </p>
 
         <div :class="bem('cards')">
@@ -37,14 +34,15 @@ export default defineComponent({
               alt="Evolve Fitness Coach"
             />
 
-            <h2 :class="bem('cardTitle')">Charlotte Höfer</h2>
-            <p :class="bem('cardDetails')">Lead Coach / Inhaberin</p>
+            <h2 :class="bem('cardTitle')">
+              {{ $t("section.team.coach1.name") }}
+            </h2>
+            <p :class="bem('cardDetails')">
+              {{ $t("section.team.coach1.qualification") }}
+            </p>
 
             <p :class="bem('cardDescription')">
-              Master in NLP, Time Line Therapy und ist Master in Hypnose. Mit
-              diesen beeindruckenden Werkzeugen hilft sie ihren Kunden wieder
-              Licht am Ende des Tunnels zu sehen, zu spüren wie es weiter geht
-              und wieder der eigene Stimme folgen zu können.
+              {{ $t("section.team.coach1.description") }}
             </p>
           </div>
 
@@ -56,14 +54,15 @@ export default defineComponent({
               alt="Evolve Fitness Coach"
             />
 
-            <h2 :class="bem('cardTitle')">Elisabeth ....</h2>
-            <p :class="bem('cardDetails')">Coach</p>
+            <h2 :class="bem('cardTitle')">
+              {{ $t("section.team.coach2.name") }}
+            </h2>
+            <p :class="bem('cardDetails')">
+              {{ $t("section.team.coach2.qualification") }}
+            </p>
 
             <p :class="bem('cardDescription')">
-              Master in NLP, Time Line Therapy und ist Master in Hypnose. Mit
-              diesen beeindruckenden Werkzeugen hilft sie ihren Kunden wieder
-              Licht am Ende des Tunnels zu sehen, zu spüren wie es weiter geht
-              und wieder der eigene Stimme folgen zu können.
+              {{ $t("section.team.coach2.description") }}
             </p>
           </div>
 
@@ -75,14 +74,15 @@ export default defineComponent({
               alt="Evolve Fitness Coach"
             />
 
-            <h2 :class="bem('cardTitle')">Anna ....</h2>
-            <p :class="bem('cardDetails')">Coach</p>
+            <h2 :class="bem('cardTitle')">
+              {{ $t("section.team.coach3.name") }}
+            </h2>
+            <p :class="bem('cardDetails')">
+              {{ $t("section.team.coach3.qualification") }}
+            </p>
 
             <p :class="bem('cardDescription')">
-              Master in NLP, Time Line Therapy und ist Master in Hypnose. Mit
-              diesen beeindruckenden Werkzeugen hilft sie ihren Kunden wieder
-              Licht am Ende des Tunnels zu sehen, zu spüren wie es weiter geht
-              und wieder der eigene Stimme folgen zu können.
+              {{ $t("section.team.coach3.description") }}
             </p>
           </div>
         </div>

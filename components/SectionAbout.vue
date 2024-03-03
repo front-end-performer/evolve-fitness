@@ -8,12 +8,9 @@ const bem = useBem("SectionAbout");
   <BasicSection id="about">
     <div :class="bem()">
       <div :class="bem('header')">
-        <h2 :class="bem('title')">Deshalb vertrauen uns unsere Kunden</h2>
+        <h2 :class="bem('title')">{{ $t("section.about.title") }}</h2>
         <p :class="bem('description')">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
-          perferendis esse itaque saepe libero inventore reiciendis quae,
-          numquam laborum nostrum accusantium voluptatibus est voluptate ipsam
-          praesentium corporis odio fugiat? Amet!
+          {{ $t("section.about.description") }}
         </p>
       </div>
 
@@ -53,7 +50,7 @@ const bem = useBem("SectionAbout");
       </div>
 
       <div :class="bem('aboutPart')">
-        <h2 :class="bem('title')">We are ...</h2>
+        <h2 :class="bem('title')">{{ $t("section.about.head") }}.</h2>
 
         <div :class="bem('content')">
           <div :class="bem('column', 'left')">

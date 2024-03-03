@@ -28,17 +28,14 @@ export default defineComponent({
               src="../static//images//evolve-logo.png"
               alt="evolve fitness"
             />
-            <p :class="bem('subtitle')">Life coaching and Fitness</p>
+            <p :class="bem('subtitle')">{{ $t("section.footer.title") }}</p>
           </div>
           <p :class="bem('description')">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-            iste vel non blanditiis, voluptas ex ea saepe. Beatae consequuntur
-            eaque nisi, tenetur soluta, odio possimus facere autem debitis
-            perferendis sunt!
+            {{ $t("section.footer.description") }}
           </p>
         </div>
         <div :class="bem('innerBox', 'contacts')">
-          <h2 :class="bem('title')">Contact Us</h2>
+          <h2 :class="bem('title')">{{ $t("section.footer.contact") }}</h2>
           <p :class="bem('info', 'address')">
             Spiegelstr. 11, 32361 Preußisch Oldendorf
           </p>
@@ -66,8 +63,11 @@ export default defineComponent({
       </div>
       <div :class="bem('divider')" />
       <div :class="bem('coopyrights')">
-        Urheberrechte © {{ new Date().getFullYear() }} by Evolve Fitness. ALLE
-        RECHTE VORBEHALTEN
+        {{
+          $t("section.footer.copyrights", {
+            date: new Date().getFullYear(),
+          })
+        }}
       </div>
     </BasicSection>
   </div>
@@ -136,6 +136,10 @@ export default defineComponent({
     @include font-label-default-semi-bold;
   }
 
+  &-description {
+    margin-top: $space-m;
+  }
+
   &-description,
   &-info,
   &-coopyrights {
@@ -157,6 +161,7 @@ export default defineComponent({
     background-color: #fcf8f3;
     border-radius: $rounded-default-radius;
     padding: 8px;
+    margin-top: $space-m;
   }
 
   &-divider {

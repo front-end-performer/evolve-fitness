@@ -21,12 +21,9 @@ export default defineComponent({
   <BasicSection id="courses">
     <div :class="bem()">
       <div :class="bem('header')">
-        <h2 :class="bem('title')">Here is what we have for you</h2>
+        <h2 :class="bem('title')">{{ $t("section.price.title") }}</h2>
         <p :class="bem('description')">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima
-          perferendis esse itaque saepe libero inventore reiciendis quae,
-          numquam laborum nostrum accusantium voluptatibus est voluptate ipsam
-          praesentium corporis odio fugiat? Amet!
+          {{ $t("section.price.description") }}
         </p>
       </div>
 
@@ -57,7 +54,7 @@ export default defineComponent({
         </div>
 
         <div :class="bem('card')">
-          <div :class="bem('popular')">most popular</div>
+          <div :class="bem('popular')">{{ $t("globals.popular") }}</div>
           <div :class="bem('content')">
             <h3 :class="bem('cardTitle')">1X WÖCHENTLICH</h3>
             <span :class="bem('category')">HOT PILATES</span>
